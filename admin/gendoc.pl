@@ -836,7 +836,7 @@ sub process_body_line
 	$_[0] =~ s/\[td\]/\<td\>/g;
 	$_[0] =~ s/\[\/td\]/\<\/td\>/g;
 	$_[0] =~ s/\[example\][ 	\n]*/<div class="example-box">/g;
-	$_[0] =~ s/\[\/example\]/<\/div>/g;
+	$_[0] =~ s/\[\/example\]/<\/div><br>/g; # this <br> is a workaround for a bug in QTextBrowser
 	$_[0] =~ s/\[comment\]/<span class="comment-text">/g;
 	$_[0] =~ s/\[\/comment\]/<\/span>/g;
 
